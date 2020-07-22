@@ -1,0 +1,9 @@
+_BASE_: "../Base-RCNN-FPN.yaml"
+MODEL:
+  MASK_ON: False
+  WEIGHTS: "catalog://ImageNetPretrained/FAIR/X-152-32x8d-IN5k"
+  RESNETS:
+    DEPTH: 152
+SOLVER:
+  STEPS: (35000, 45000)
+  MAX_ITER: 50000
